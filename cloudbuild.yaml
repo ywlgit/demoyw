@@ -9,7 +9,7 @@ steps:
     - ls -ltra
 
   - name: gcr.io/cloud-builders/gsutil
-    args: ['cp', 'quickstart.py', 'gs://wow-taw-d1-ylai-93bq-composer-bucket/dags']
+    args: ['cp', './demoyw/quickstart.py', 'gs://wow-taw-d1-ylai-93bq-composer-bucket/dags']
 
   - name: gcr.io/cloud-builders/gcloud
     args: 
