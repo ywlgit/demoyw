@@ -9,7 +9,7 @@ steps:
     - ls -ltra
 
   - name: gcr.io/cloud-builders/gsutil
-    args: ['cp', './demoyw/quickstart.py', 'gs://wow-taw-d1-ylai-93bq-composer-bucket/dags']
+    args: ['cp', '/home/ylai/demoyw/quickstart.py', 'gs://wow-taw-d1-ylai-93bq-composer-bucket/dags']
 
   - name: gcr.io/cloud-builders/gcloud
     args: 
@@ -21,4 +21,4 @@ steps:
         'import', 
         '--environment', 'usertest', 
         '--location', 'us-east1', 
-        '--source', 'gs://wow-taw-d1-ylai-93bq-composer-bucket/dags/quicksttart.py']
+        '--source', 'gs://wow-taw-d1-ylai-93bq-composer-bucket/dags/quickstart.py']
