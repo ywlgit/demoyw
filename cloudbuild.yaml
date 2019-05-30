@@ -2,6 +2,12 @@ steps:
   - name: gcr.io/cloud-builders/git
     args: ['clone', 'https://github.com/ywlgit/demoyw']
 
+  - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args:
+    - '-c'
+    - ls -ltra
+
   - name: gcr.io/cloud-builders/gsutil
     args: ['cp', 'quickstart.py', 'gs://wow-taw-d1-ylai-93bq-composer-bucket/dags']
 
